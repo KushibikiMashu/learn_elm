@@ -1,6 +1,5 @@
 import Browser
 import Html exposing (..)
-import Html.Attributes exposing (..)
 import Task
 import Time
 
@@ -61,7 +60,4 @@ view model =
         minute = String.fromInt (Time.toMinute model.zone model.time)
         second = String.fromInt (Time.toSecond model.zone model.time)
     in
-    div [] 
-        [ h1 [] [ text (hour ++ ":" ++ minute ++ ":" ++ second) ]
-        , button [] [ a [ href "/src" ] [ text "Back" ] ]
-        ]
+    h1 [] [ text (hour ++ ":" ++ minute ++ ":" ++ second) ]
