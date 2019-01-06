@@ -17,6 +17,7 @@ estimatedReadTime : Post -> Float
 estimatedReadTime post =
     toFloat (wordCount post) / 220
 
+
 wordCount : Post -> Int
 wordCount post =
     List.length (String.word post.content)
@@ -30,6 +31,7 @@ encode post =
         , ("author", E.string post.author)
         , ("content", E.string post.content)
         ]
+
 
 decoder : D.Decoder Post
 decoder =

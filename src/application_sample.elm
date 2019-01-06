@@ -74,6 +74,7 @@ view model =
         ]
     }
 
+
 viewLink : String -> Html msg
 viewLink path =
     li [] [ a [ href path ] [ text path ] ]
